@@ -1,0 +1,90 @@
+body {
+    font-family: 'Bree Serif', serif;
+    color:green;
+    background: url("../images/backgroundimage.jpg");
+    display: block;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
+  }
+  
+  h1 {
+    font-family: 'Bree Serif', serif;
+    font-weight: 700;
+    color: white;
+    background-color: coral
+  }
+  
+  h1 {
+    
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #ddd;
+  }
+  
+  
+  #instructions {
+    
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 0 40px;
+    background:peachpuff;
+    border: 1px solid #ddd;
+  }
+  
+  #randomNumber {
+    float: left;
+    height: 150px;
+    width: 200px;
+    background: mediumseagreen;
+    color: indigo;
+    margin: 20px 20px 20px;
+    overflow: auto;
+  }
+
+  #score {
+      float: left;
+      height: 150px;
+      width: 75px;
+      margin: 20px 20px 20px;
+      background:deepskyblue;
+      color: green;
+
+  }
+  
+  .button {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  #gemOne,
+  #gemTwo,
+  #gemThree,
+  #gemFour {
+    width: 100%;
+    border: 0 none;
+  }
+
+  #numberHeadline {
+      margin: 10px 10px 10px 10px;
+      width: 200px;
+      height: 30px;
+      background: teal;
+      color: white;
+  }
+
+  #userNumber {
+    margin: 10px 10px 10px 10px;
+    width: 200px;
+    height: 150px;
+    background: teal;
+    color: white;
+  }
