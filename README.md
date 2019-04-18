@@ -2,8 +2,7 @@
 
 ## What is this repo project?
 
-* This repo is a fun game called Crystal Collector!
-* The player will have to guess correct numbers in order to win the game.
+* This repo is a fun javascript powered game called Crystal Collector
 
 ## How does it work?
 
@@ -24,7 +23,7 @@
 
      * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
-   * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.v
+   * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
 
 ## Who will use this repo?
 
@@ -33,5 +32,4 @@
 ## What is the goal of the project?
 
 * Create an interactive game for the web using jQuery!
-
- The player will have to guess the answers with numbers instead of letters. 
+ 
