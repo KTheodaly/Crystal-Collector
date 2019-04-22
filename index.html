@@ -1,78 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Collector</title> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <title>unit 4 - gem game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 </head>
+
 <body>
-
-    <div class="container" id="title">
-        <div class="row">
-            <div class="column-md-6">
-                    <h1>Crystal Collector!</h1>
+    <h1>gems</h1>
+    <div>
+        <div id="playerText"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-4">
+                    <p id="instructions">Click on gems to add a hidden value to your total until it matches your GOAL!
+                    </p>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2"><button id="reset">
+                        reset
+                    </button>
+                </div>
+                <div class="col-2"></div>
             </div>
-            <div class="column-md-6"></div>
         </div>
-        
     </div>
-    <div class="container" id="instructions">
-        <div class="row">
-            <div class ="column-md-10">
-                <p>You will be given a random number at the start of the game. <br>
-                    <br>
-                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br> 
-                    <br>
-                    You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. <br>
-                    <br>
-                    The value of each crystal is hidden from you until you click on it. <br>
-                    <br>
-                    Each time when the game starts, the game will change the values of each crystal.
-                </p>
+
+    <div class="container">
+        <div class="row" id="scores">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">
+                <div>
+                    <p>Your Total</p>
+                </div>
+                <div>
+                    <p id="playerTot"> 0 </p>
+                </div>
             </div>
-            <div class ="column-md-2"></div>
+
+            <div class="col">
+                <div>
+                    <p> GOAL TOTAL</p>
+                </div>
+                <div>
+                    <p id="goalTot"> 0 </p>
+                </div>
+            </div>
+
+            <div class="col">
+                <div>
+                    <p> Wins </p>
+                </div>
+                <div>
+                    <p id="winCount"> 0 </p>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <p> Losses </p>
+                </div>
+                <div>
+                    <p id="lossCount">0</p>
+                </div>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+
         </div>
-    </div>
-    <div class="container">
+
         <div class="row">
-            <div class="column-md-6" id="randomNumber"></div>
-            <div class="column-md-6" id="score">
-                <!--Result-->
-                Wins:<br>
-                Losses:<br>
-                 </div>
+            <div class="col">
+                <button id="gem1" class="gemButt">
+                    <i class="far fa-gem"></i>
+                </button>
+            </div>
+            <div class="col">
+                <button id="gem2" class="gemButt">
+                    <i class="far fa-gem"></i>
+                </button>
+            </div>
+            <div class="col">
+                <button id="gem3" class="gemButt">
+                    <i class="far fa-gem"></i>
+                </button>
+            </div>
+            <div class="col">
+                <button id="gem4" class="gemButt">
+                    <i class="far fa-gem"></i>
+                </button>
+            </div>
         </div>
+
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="column-md-3">
-                <button class="button"><img src="./assets/images/gemone.jpg" id="gemOne"> </button></div>
-            <div class="column-md-3">
-                <button class="button"><img src="./assets/images/gemtwo.jpg" id="gemTwo"> </button></div>
-            <div class="column-md-3">
-                <button class="button"><img src="./assets/images/gemthree.jpg" id="gemThree"> </button></div>
-            <div class="column-md-3">
-                <button class="button"><img src="./assets/images/gemfour.jpg" id="gemFour"> </button></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="column-md-6" id ="numberHeadline">Your Total Score Is:</div>
-            <div class="column-md-6"></div>
-    </div>
-    <div class="container">
-        <div class="row">
-                <div class="column-md-6" id="userNumber"></div>
-                <div class="column-md-6"></div>
-        </div>
-    </div>  
 
 
-    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='crossorigin='anonymous'></script>
-    <script src="./assets/javascript/game.js"></script>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
+
 </html>
