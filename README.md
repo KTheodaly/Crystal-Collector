@@ -1,4 +1,4 @@
-# unit-4-game
+# Crystal Collector Game
 
 ## What is this repo project?
 
